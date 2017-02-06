@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_width="4dp"
+            android:layout_height="24dp"
+            android:background="@color/colorTextRed"/>
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_recom"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="热门职位"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextRed"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"
+        />
+    <GridView
+        android:background="@color/white"
+        android:id="@+id/item_zhiwei_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="#00dddddd"
+        android:dividerHeight="1dp"
+        android:scrollingCache="false"
+        android:numColumns="3"
+        android:paddingTop="16dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:horizontalSpacing="20dp"
+        android:verticalSpacing="14dp"
+        android:stretchMode="columnWidth"
+        android:columnWidth="80dp"
+        />
+</LinearLayout>

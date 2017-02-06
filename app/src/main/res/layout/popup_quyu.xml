@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:background="@color/color_touming"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <View
+            android:background="@color/color_touming"
+            android:id="@+id/popup_quyu_quyu"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <View
+            android:background="@color/color_touming"
+            android:id="@+id/popup_quyu_tingshi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <View
+            android:background="@color/color_touming"
+            android:id="@+id/popup_quyu_money"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <View
+        android:background="@color/gapColor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:baselineAligned="false"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridView
+            android:background="@color/white"
+            android:id="@+id/popup_quyu_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_weight="1"
+            android:divider="#00dddddd"
+            android:dividerHeight="1dp"
+            android:scrollingCache="false"
+            android:numColumns="4"
+            android:paddingTop="16dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:horizontalSpacing="20dp"
+            android:verticalSpacing="14dp"
+            android:stretchMode="columnWidth"
+            android:columnWidth="80dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

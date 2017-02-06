@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+
+  <LinearLayout
+      android:layout_width="70dp"
+      android:layout_height="wrap_content">
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/item_colum_tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/item_colum_tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="10月"
+        android:textSize="13sp"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="14dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="10dp"
+      android:background="#F0F0F0"
+      android:padding="@dimen/dp_8"
+      android:orientation="vertical">
+    <com.xiangying.fighting.widget.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这里的风景真不错，今天心情真好"
+        android:id="@+id/item_colum_tv_content"
+        android:layout_marginBottom="@dimen/dp_8"
+        />
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:id="@+id/jc_me_video"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+  </LinearLayout>
+
+
+</LinearLayout>

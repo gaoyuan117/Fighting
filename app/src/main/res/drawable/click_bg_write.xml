@@ -1,0 +1,22 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:state_enabled="false" android:drawable="@drawable/button_disabled"/>-->
+    <item android:state_pressed="false">
+        <shape
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shape="rectangle" >
+            <!--<corners android:radius="5dp" />-->
+            <solid android:color="#ffffff"/>
+        </shape>
+    </item>
+    <item  android:state_pressed="true">
+        <shape
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shape="rectangle" >
+            <!--<corners android:radius="5dp" />-->
+            <solid android:color="#c0ffffff"/>
+        </shape>
+    </item>
+
+</selector>

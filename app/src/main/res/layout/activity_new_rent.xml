@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+  <include
+      android:id="@+id/title_bar"
+      layout="@layout/titlebar_common"/>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/title_bar"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="房子图片："
+            />
+
+        <com.xiangying.fighting.widget.MyGridView
+            android:id="@+id/activity_new_rent_gv_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:columnWidth="80dp"
+            android:horizontalSpacing="8dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="8dp"
+            >
+
+        </com.xiangying.fighting.widget.MyGridView>
+
+
+      </LinearLayout>
+
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="名      称 ："
+            />
+
+        <com.xiangying.fighting.widget.ClearEditText
+            android:id="@+id/activity_new_rent_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="14sp"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="价      格 ："
+            />
+
+        <com.xiangying.fighting.widget.ClearEditText
+            android:id="@+id/activity_new_rent_et_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="14sp"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"/>
+
+      <LinearLayout
+          android:id="@+id/activity_new_rent_ll_tingshi"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:clickable="true"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="厅      室 "
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_new_rent_tv_tingshi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            android:text="请选择"
+            />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            fresco:placeholderImage="@drawable/more"
+            />
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="面      积 ："
+            />
+
+        <com.xiangying.fighting.widget.ClearEditText
+            android:id="@+id/activity_new_rent_et_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:hint="平米"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="14sp"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="所在楼层："
+            />
+
+        <com.xiangying.fighting.widget.ClearEditText
+            android:id="@+id/activity_new_rent_et_floor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="14sp"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="总  层  数："
+            />
+
+        <com.xiangying.fighting.widget.ClearEditText
+            android:id="@+id/activity_new_rent_et_total_floor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="14sp"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="小区名称："
+            />
+
+        <com.xiangying.fighting.widget.ClearEditText
+            android:id="@+id/activity_new_rent_et_xiaoqu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="14sp"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="小区地址："
+            />
+
+        <com.xiangying.fighting.widget.ClearEditText
+            android:id="@+id/activity_new_rent_et_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="14sp"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="房源描述："
+            />
+
+        <EditText
+            android:id="@+id/activity_new_rent_et_describ"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="请输入对本房源的具体描述"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:textSize="14sp"
+            />
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="20dp"/>
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:id="@+id/activity_new_rent_tv_publish"
+          android:layout_width="match_parent"
+          android:layout_height="38dp"
+          android:layout_marginBottom="16dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:background="@drawable/selector_item_press_red"
+          android:clickable="true"
+          android:gravity="center"
+          android:text="发布"
+          android:textColor="@color/white"
+          android:textStyle="bold"
+          />
+      <com.xiangying.fighting.widget.FontTextView
+          android:id="@+id/activity_new_rent_tv_delete"
+          android:layout_width="match_parent"
+          android:layout_height="38dp"
+          android:layout_marginBottom="16dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:background="@drawable/selector_item_press_red"
+          android:clickable="true"
+          android:gravity="center"
+          android:text="删除该发布"
+          android:textColor="@color/white"
+          android:visibility="gone"
+          android:textStyle="bold"
+          />
+    </LinearLayout>
+  </ScrollView>
+
+</RelativeLayout>

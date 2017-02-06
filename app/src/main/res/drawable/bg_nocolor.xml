@@ -1,0 +1,48 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shape="rectangle" >
+
+            <solid android:color="@color/colorTextGray" />
+
+            <corners android:radius="5dp" />
+
+
+        </shape>
+    </item>
+    <item
+        android:state_pressed="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shape="rectangle" >
+
+            <solid android:color="@color/transparent" />
+
+            <stroke android:width="1px"
+                android:color="@color/text_nomal"/>
+            <corners android:radius="5dp" />
+
+
+        </shape>
+    </item>
+    <item
+        android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shape="rectangle" >
+
+            <solid android:color="@color/main_halfpink" />
+            <stroke android:width="1px"
+                android:color="@color/text_nomal"/>
+            <corners android:radius="5dp" />
+
+
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.three.selfinfo.PublishNewAlbumActivity">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/title_bar_common_rv_viewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <com.xiangying.fighting.widget.FontTextView
+                android:clickable="true"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/mnickname_save"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_item_press_touming"
+                android:text="保存"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                />
+
+            <com.xiangying.fighting.widget.FontTextView
+                android:id="@+id/title_bar_common_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="个性签名"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/title_bar_common_iv_operate_1"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:background="@drawable/selector_item_press_touming"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:src="@drawable/back_white" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#868585"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/bg_state_normal_white_btn"
+            android:hint="请输入描述..."
+            android:gravity="left"
+            android:paddingTop="10dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/activity_PNA_et_content"
+            android:paddingRight="8dp"
+            android:textSize="14sp"
+            />
+
+        <com.xiangying.fighting.widget.MyGridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_PNA_gv_images"
+            android:numColumns="auto_fit"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:columnWidth="80dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

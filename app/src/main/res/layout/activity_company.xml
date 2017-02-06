@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:background="@color/colorPrimary"
+      android:orientation="horizontal">
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="我的企业"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/title_bar_common_iv_operate_1"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_item_press_touming"
+        android:clickable="true"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/back_white"/>
+  </RelativeLayout>
+
+
+  <LinearLayout
+      android:id="@+id/layout_about_company"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:background="@color/white"
+      android:orientation="horizontal"
+      >
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="企业简介"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        fresco:placeholderImage="@drawable/more"
+        />
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="0.3dp"/>
+
+  <LinearLayout
+      android:id="@+id/layout_release_infomation"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:background="@color/white"
+      android:orientation="horizontal"
+      >
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="发布的招聘"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        fresco:placeholderImage="@drawable/more"
+        />
+  </LinearLayout>
+</LinearLayout>

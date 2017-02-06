@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <include
+      android:id="@+id/title_bar"
+      layout="@layout/titlebar_common"
+      />
+
+  <com.xiangying.fighting.widget.OverScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/title_bar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+      <RelativeLayout
+          android:id="@+id/layout_ent_gallery"
+          android:layout_width="fill_parent"
+          android:layout_height="230dp"
+          android:background="@color/white"
+          android:focusable="true">
+
+        <com.xiangying.fighting.widget.loopviewpager.AutoLoopViewPager
+            android:id="@+id/activity_rent_detail_viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <com.xiangying.fighting.widget.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/activity_rent_detail_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"/>
+      </RelativeLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_rent_detail_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="原标题：暴徒闹市街头连开两枪 警方追凶一个月 主犯落网"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            >
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:id="@+id/activity_rent_detail_tv_price"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="2500"
+              android:textColor="@color/colorTextRed"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              />
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              android:text="@string/pricerent"
+              android:textColor="@color/colorTextGray"
+              android:textSize="12sp"
+              />
+
+
+        </LinearLayout>
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_rent_detail_tv_publishTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="发布：15.06.08"
+            android:textColor="@color/colorTextGray"
+            android:textSize="10sp"
+            />
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            >
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:id="@+id/activity_rent_detail_tv_tingshi"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:paddingLeft="16dp"
+              android:text="厅室："
+              />
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:id="@+id/activity_rent_detail_tv_mianji"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:paddingLeft="16dp"
+              android:text="面积：平米"
+
+              />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            >
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:id="@+id/activity_rent_detail_tv_floor"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:paddingLeft="16dp"
+              android:text="楼层：2/34"
+              />
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:paddingLeft="16dp"
+              android:text=""
+              />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:id="@+id/activity_rent_detail_tv_xiaoqu"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:paddingBottom="12dp"
+          android:paddingLeft="16dp"
+          android:paddingTop="12dp"
+          android:text="小区：恒大名都"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.3dp"
+          android:background="@color/gapColor"
+
+          />
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:id="@+id/activity_rent_detail_tv_address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:paddingBottom="12dp"
+          android:paddingLeft="16dp"
+          android:paddingTop="12dp"
+          android:text="地址：恒大名都"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:id="@+id/activity_rent_detail_tv_describ"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:paddingBottom="12dp"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:paddingTop="12dp"
+          android:text="7月28日凌晨，武江区工业西路某酒吧门口厮杀声响成一片，两队人马手持凶器在一酒吧门口空地上互相“火拼”。火爆的场景引来了附近过往的市民驻足观望时，街头突然响起了“砰、砰”两声沉闷的声响。“枪！他们有枪！快跑！”一阵惊呼声响起，围观的市民开始混乱起来，人们尖叫着四处奔逃。这不是影视大片中的场景，而是现实生活中的真实一幕，也是韶关市近年来极为罕见的街头暴力犯罪。当武江公安分局民警接报迅速奔赴现场时，械斗人群已经散去，酒吧门窗皆被损毁，现场一片狼藉。
+　　什么人如此嚣张，在这个平静的山城街头公然开枪？民警随后在案发现场提取到弹壳、棍棒等物证。由于该案性质恶劣，情节严重，武江分局迅速抽调了大批精干民警组成专案组，投入到案件现场勘查、外围走访、调取监控等侦破工作中来。"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="80dp"
+          android:background="@color/white"/>
+    </LinearLayout>
+  </com.xiangying.fighting.widget.OverScrollView>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:layout_alignParentBottom="true"
+      android:background="#c3000000"
+      android:visibility="gone"
+      >
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_rent_detail_liaojie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:text="加房东好友，了解更多详细信息"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_rent_detail_fangdong_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_rent_detail_liaojie"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="房东战斗号：1000000"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_rent_detail_tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_item_press_red"
+        android:clickable="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:text="@string/jiahaoyou"
+        android:textColor="@color/white"
+        />
+
+  </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp"
+        android:id="@+id/report_item_liner"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text14"
+            android:text="违法"
+            android:id="@+id/report_item_contcnt"
+            android:textColor="@color/text_nomal"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:button="@null"
+            android:background="@drawable/check_report"
+            android:id="@+id/report_item_check"
+            />
+    </LinearLayout>
+</LinearLayout>

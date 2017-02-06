@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/layout_bg"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    tools:context="com.xiangying.com.xiangying.fighting.first.armygroup.CreatGroupActivity">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/title_bar_common_tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/bg_click"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="确认"
+            android:textSize="18sp" />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="添加分队"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/title_bar_common_iv_operate_1"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:background="@drawable/selector_item_press_touming"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:src="@drawable/back_white" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/creatgroup_edt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="@dimen/text14"
+        android:textColor="@color/text_nomal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:hint="给您的分队起一个响亮的名字"
+        android:background="@drawable/edit_bg_write"
+        android:textColorHint="@color/colorTextGray"/>
+
+
+</LinearLayout>

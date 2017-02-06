@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="102dp"
+    android:background="@drawable/selector_item_press_white"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/item_rent_room_sdv_picture"
+        fresco:placeholderImage="@color/placeholderImage"
+        fresco:actualImageScaleType="centerCrop"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        />
+    <LinearLayout
+        android:layout_toRightOf="@id/item_rent_room_sdv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginTop="11dp"
+            android:text="万达广场 精装修 超低价130平米出租 晶都三箭绿地"
+            android:ellipsize="end"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/item_rent_room_tv_title"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="某某小区"
+            android:id="@+id/item_rent_room_tv_community"
+            android:textColor="@color/gray"
+            android:textSize="11sp"
+            android:layout_marginLeft="12dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="1000元"
+            android:id="@+id/item_rent_room_tv_money"
+            android:textColor="@color/colorTextRed"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="12dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

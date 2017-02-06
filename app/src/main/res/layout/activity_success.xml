@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.two.findrent.SuccessActivity">
+
+
+    <include layout="@layout/titlebar_common"/>
+    
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            fresco:placeholderImage="@drawable/success"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您发布的信息已提交"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="等待管理员审核"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</LinearLayout>

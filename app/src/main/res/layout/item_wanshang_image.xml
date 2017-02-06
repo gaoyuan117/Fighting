@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        fresco:placeholderImage="@drawable/default_image"
+        android:id="@+id/item_wanshang_sdv_image"
+        />
+
+</LinearLayout>

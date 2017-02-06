@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.two.jiehun.MarrySearchActivity">
+
+    <include layout="@layout/titlebar_common_search"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_area"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="地区 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_area"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_age"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="年龄 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_age"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_height"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="身高 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_height"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_education"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="学历 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_education"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_income"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="收入 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_income"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_marryHis"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="婚史 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_marryHis"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_car"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="购车情况 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_car"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/activity_publish_NJ_ll_house"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="购房情况 "
+            android:paddingLeft="16dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/activity_publish_NJ_tv_house"
+            android:text="不限"
+            android:gravity="center_vertical|right"
+            android:paddingRight="6dp"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/more"
+            android:layout_marginRight="16dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gapColor"/>
+
+
+</LinearLayout>

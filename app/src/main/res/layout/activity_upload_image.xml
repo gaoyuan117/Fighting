@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg"
+    tools:context=".ui.first.vedio.UploadActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main_color"
+        >
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_white"
+            android:id="@+id/img_back"
+            android:background="@drawable/bg_click"
+            android:padding="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="发布信息"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:id="@+id/upload_tv_title"
+            android:textSize="@dimen/text18"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="发布"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/bg_click"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="@dimen/text16"
+            android:id="@+id/upload_tv_send"
+            android:textColor="@color/white"
+            />
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:lineSpacingExtra="5dp"
+        android:text="只能上传正能量，环保，公益，对社会有帮助的内容，如有广告和不雅视频，会被平台列入黑名单。"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/text14"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:maxWidth="300dp"
+        android:background="@color/white"
+        android:textColor="@color/text_nomal"
+        android:textSize="@dimen/text14"
+        android:gravity="top"
+        android:padding="15dp"
+        android:lineSpacingExtra="5dp"
+        android:id="@+id/upload_ed"
+        android:hint="说点什么吧..."/>
+
+    <com.xiangying.fighting.widget.MyGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/upload_gv_images"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="8dp"
+        android:background="@color/white"
+        android:listSelector="@null"
+        android:layout_marginBottom="16dp"
+        android:columnWidth="80dp"
+        >
+    </com.xiangying.fighting.widget.MyGridView>
+</LinearLayout>

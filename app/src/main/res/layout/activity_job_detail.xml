@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.two.findjob.JobDetailActivity">
+
+
+  <include
+      android:id="@+id/title_bar"
+      layout="@layout/titlebar_common"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/title_bar"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+      <LinearLayout
+          android:id="@+id/activity_JD_gangwei_ll"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          >
+
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_JD_gangwei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="岗位职责"
+            android:textColor="@color/colorTextBlank"
+            android:textSize="15sp"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_JD_gangwei_gap"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:background="@color/colorPrimary"
+            />
+      </LinearLayout>
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:layout_width="1dp"
+          android:layout_height="match_parent"
+
+          android:layout_marginBottom="8dp"
+          android:layout_marginTop="8dp"
+          />
+
+      <LinearLayout
+          android:id="@+id/activity_JD_gongsi_ll"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_JD_gongsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="公司简介"
+            android:textColor="@color/colorTextBlank"
+            android:textSize="15sp"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_JD_gongsi_gap"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:background="@color/colorPrimary"
+            />
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_JD_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></FrameLayout>
+  </LinearLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:layout_alignParentBottom="true"
+      android:visibility="gone"
+      android:background="#c3000000"
+      >
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_JD_liaojie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:text="加企业好友，了解更多详细信息"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_JD_fangdong_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_JD_liaojie"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="企业战斗号：1000000"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_JD_tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_item_press_red"
+        android:clickable="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:text="@string/jiahaoyou"
+        android:textColor="@color/white"
+        />
+
+  </RelativeLayout>
+
+</RelativeLayout>

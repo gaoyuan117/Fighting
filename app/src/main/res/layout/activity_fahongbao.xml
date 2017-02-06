@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.two.jiehun.FahongbaoActivity">
+
+
+    <include layout="@layout/titlebar_common"/>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_state_normal_white_btn"
+        >
+        <com.xiangying.fighting.widget.ClearEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_state_normal_white_btn"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:hint="输入发送金额"
+            android:singleLine="true"
+            android:id="@+id/activity_fahongbao_et_money"
+            android:inputType="number"
+            android:paddingLeft="12dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:layout_marginRight="12dp"
+            />
+
+    </LinearLayout>
+
+
+ <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_state_normal_white_btn"
+        >
+        <com.xiangying.fighting.widget.ClearEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_state_normal_white_btn"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:hint="留言"
+            android:singleLine="true"
+            android:inputType="text"
+            android:id="@+id/activity_fahongbao_et_remark"
+            android:paddingLeft="12dp"
+            />
+
+    </LinearLayout>
+
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="￥0.00"
+        android:textSize="16sp"
+        android:id="@+id/activity_fahongbao_tv_money"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        />
+    <com.xiangying.fighting.widget.FontTextView
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="发送红包"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_item_press_red"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/activity_fahongbao_tv_send"
+        />
+    <com.xiangying.fighting.widget.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorTextRed"
+        android:text="发送完红包，可以加对方战斗号，约会聊天"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+</LinearLayout>

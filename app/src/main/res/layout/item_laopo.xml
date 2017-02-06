@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+    
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        fresco:placeholderImage="@drawable/default_image"
+        fresco:failureImage="@drawable/default_image"
+        fresco:actualImageScaleType="centerCrop"
+        android:id="@+id/item_laopo_img"
+        />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:background="#63535353"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="点点滴滴"
+            android:textSize="11sp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/item_laopo_name"
+            android:textColor="@color/white"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="24岁"
+            android:paddingRight="4dp"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:textSize="11sp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/item_laopo_age"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

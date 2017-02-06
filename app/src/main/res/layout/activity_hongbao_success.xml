@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.two.jiehun.HongbaoSuccessActivity">
+
+    <include layout="@layout/titlebar_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            fresco:placeholderImage="@drawable/success"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红包发送成功!"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.xiangying.fighting.widget.FontTextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="对方战斗号：21554245"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/activity_hongbao_success_zhandouhao"
+                />
+            <com.xiangying.fighting.widget.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加为好友"
+                android:paddingLeft="14dp"
+                android:clickable="true"
+                android:paddingRight="14dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:background="@drawable/selector_item_press_red"
+                android:textColor="@color/white"
+                android:id="@+id/activity_hongbao_success_jiahaoyou"
+                android:layout_marginRight="16dp"
+                />
+
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

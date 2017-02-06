@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".ui.two.gongyi.GongyiDetailActivity">
+
+
+  <include
+      android:id="@+id/title_bar"
+      layout="@layout/titlebar_common"
+      />
+
+  <com.xiangying.fighting.widget.OverScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title_bar"
+      android:paddingBottom="60dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+      <com.facebook.drawee.view.SimpleDraweeView
+          android:id="@+id/activity_gongyi_adv_xuanchuantu"
+          android:layout_width="match_parent"
+          android:layout_height="180dp"
+          fresco:actualImageScaleType="fitXY"
+          fresco:placeholderImage="@drawable/default_image"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="80dp"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          >
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:id="@+id/activity_gongyi_tv_mubiao"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="20dp"
+              android:text="￥200000"
+              android:textColor="@color/colorTextGreen"
+              android:textStyle="bold"
+              />
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="4dp"
+              android:text="目标（元）"
+              />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/gapColor"
+            />
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:id="@+id/activity_gongyi_tv_dangqian"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="20dp"
+              android:text="￥200000"
+              android:textColor="@color/colorTextGreen"
+              android:textStyle="bold"
+              />
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="4dp"
+              android:text="已筹款（元）"
+              />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:id="@+id/activity_gongyi_tv_renshu"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="20dp"
+              android:text="25人"
+              android:textColor="@color/colorTextGreen"
+              android:textStyle="bold"
+              />
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="4dp"
+              android:text="捐款人数"
+              />
+        </LinearLayout>
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:padding="16dp"
+          android:id="@+id/activity_gongyi_tv_info"
+          android:text=""
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            >
+
+          <View
+              android:layout_width="5dp"
+              android:layout_height="20dp"
+              android:layout_gravity="center_vertical"
+              android:layout_marginLeft="12dp"
+              android:background="@color/colorTextRed"/>
+
+          <com.xiangying.fighting.widget.FontTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:layout_marginLeft="4dp"
+              android:text="项目详情"
+              />
+
+
+        </LinearLayout>
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:id="@+id/activity_gongyi_tv_des"
+            android:text=""
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+      </LinearLayout>
+    </LinearLayout>
+  </com.xiangying.fighting.widget.OverScrollView>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_alignParentBottom="true"
+      android:background="@color/white"
+      android:orientation="horizontal"
+      >
+
+    <RelativeLayout
+        android:id="@+id/activity_gongyi_juankuan_ll"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_btn_green"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+      <com.facebook.drawee.view.SimpleDraweeView
+          android:id="@+id/icon_juankuan"
+          android:layout_width="36dp"
+          android:layout_height="36dp"
+          fresco:placeholderImage="@drawable/shou"
+          />
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_toRightOf="@id/icon_juankuan"
+          android:text="我要捐款"
+          android:textColor="@color/white"
+          android:textSize="18sp"
+          />
+
+    </RelativeLayout>
+  </LinearLayout>
+
+  <RelativeLayout
+      android:id="@+id/enter_juankuan_num_ll"
+      android:layout_width="match_parent"
+      android:layout_height="150dp"
+      android:layout_alignParentBottom="true"
+      android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+      <com.xiangying.fighting.widget.ClearEditText
+          android:id="@+id/juankuan_num_et"
+          android:layout_width="match_parent"
+          android:layout_height="46dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="24dp"
+          android:background="@drawable/edit_bg_write3"
+          android:hint="捐款金额"
+          android:inputType="numberDecimal"
+          android:paddingLeft="10dp"
+          android:textSize="14sp"
+          />
+
+      <RelativeLayout
+          android:id="@+id/activity_gongyi_juankuansure_ll"
+          android:layout_width="match_parent"
+          android:layout_height="46dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="14dp"
+          android:background="@drawable/bg_btn_green"
+          android:gravity="center"
+          android:orientation="horizontal"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="立即捐款"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+
+      </RelativeLayout>
+    </LinearLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/juankuan_cancle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        fresco:placeholderImage="@drawable/search_cancle"
+        fresco:placeholderImageScaleType="centerCrop"
+        />
+  </RelativeLayout>
+
+</RelativeLayout>

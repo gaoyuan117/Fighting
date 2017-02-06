@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_help2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xiangying.fighting.ui.three.setting.HelpActivity">
+
+    <include layout="@layout/titlebar_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="1. 如何开店？"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="答：在【我】的界面中，点击【我是卖家】，填写信息，然后等待后台审核，审核通过即可发布商品。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="2. 怎么样找工作？"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="答：在【好的】的界面中，点击【好工作】即可搜索自己喜欢的工作。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="3. 怎么发布租房和租房？"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="答：在【好的】的界面中，点击【好租房】，选择区域，厅室，租金，即可找到您满意的房子。点击右上角，填写信息，即可发布租房信息。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="4. 怎么样找对象？"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="答：在【好的】的界面中，点击【结婚吧】，即可找到自己心仪的对象。也可以在【我】的界面，点击【结婚吧资料管理】，发布自己信息，寻找心仪人。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="5. 还有什么？"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="答：战斗吧 具有多种功能，购物、参加公益活动、发红包、战友之间聊天、企业发布招聘信息，还可以分享自己的生活动态。战斗吧 欢迎您的加入。" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

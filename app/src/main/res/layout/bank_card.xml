@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E46379"
+        android:padding="15dp"
+        >
+
+    <TextView
+        android:id="@+id/tv_card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中国银行"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_card_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_card_name"
+        android:layout_marginTop="7dp"
+        android:text="储蓄卡"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_card_weihao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="尾号"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_card_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_card_weihao"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_card_weihao"
+        android:layout_marginTop="7dp"
+        android:lines="1"
+        android:text="4561"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divideLineColor"
+        android:layout_below="@+id/rl_card"
+        />
+
+</RelativeLayout>

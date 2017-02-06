@@ -1,0 +1,639 @@
+<!-- 我的信息 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgvew_top_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/personal_head_bg"
+                android:background="@drawable/personal_bg_person" />
+
+            <LinearLayout
+                android:id="@+id/llayout_favorite"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:layout_below="@+id/imgvew_top_bg"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Btn_Wrap_Black_Text"
+                        android:gravity="center"
+                        android:text="" />
+
+                    <TextView
+                        style="@style/Btn_Wrap_Black_Text_Sm"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rlayout_schedule_favorite_product_click"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvew_favorite_product_show"
+                        style="@style/Btn_Wrap_Black_Text"
+                        android:gravity="center"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/Btn_Wrap_Black_Text_Sm"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text="收藏的商品" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0.5dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/gray_white" />
+
+                <LinearLayout
+                    android:id="@+id/rlayout_my_favorite_shop_intent_click"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvew_favorite_shop_show"
+                        style="@style/Btn_Wrap_Black_Text"
+                        android:gravity="center"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/Btn_Wrap_Black_Text_Sm"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text="收藏的店铺" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0.5dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/gray_white" />
+
+                <LinearLayout
+                    android:id="@+id/rlayout_footprint_click"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvew_footprint_show"
+                        style="@style/Btn_Wrap_Black_Text"
+                        android:gravity="center"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/Btn_Wrap_Black_Text_Sm"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text="我的足迹" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout_head_picture_click"
+                android:layout_width="@dimen/personal_head_picture"
+                android:layout_height="@dimen/personal_head_picture"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/personal_head_magin_top"
+                android:background="@drawable/user_headimg_full"
+                android:gravity="center">
+
+                <com.android.zcomponent.views.CircleImageView
+                    android:id="@+id/imgvew_head_picture_show"
+                    android:layout_width="@dimen/personal_head_picture"
+                    android:layout_height="@dimen/personal_head_picture"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvew_account_show"
+                style="@style/Text_Wrap_White_Text"
+                android:layout_width="wrap_content"
+                android:layout_alignTop="@+id/llayout_head_picture_click"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toRightOf="@+id/llayout_head_picture_click"
+                android:gravity="left"
+                android:text="请登录" />
+
+            <TextView
+                android:id="@+id/tvew_level_click"
+                style="@style/Text_Wrap_White_Text_Sm"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:visibility="visible"
+                android:layout_toRightOf="@+id/tvew_account_show"
+                android:background="@drawable/personal_bg_set"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvew_setting_click"
+                style="@style/Text_Wrap_White_Text_Sm"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toLeftOf="@+id/rlayout_message_click"
+                android:background="@drawable/personal_bg_set"
+                android:text="设置" />
+
+            <TextView
+                android:id="@+id/tvew_qiandao_click"
+                style="@style/Text_Wrap_White_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/llayout_head_picture_click"
+                android:layout_marginRight="@dimen/margin_15"
+                android:background="@drawable/personal_bg_set"
+                android:text="签到" />
+
+            <LinearLayout
+                android:id="@+id/layout_zan_count"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/llayout_head_picture_click"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/personal_zan"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvew_guzhang_click"
+                    style="@style/Text_Wrap_White_Text"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFC209"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/icon44"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tvew_cai_click"
+                    style="@style/Text_Wrap_White_Text"
+                    android:textColor="#FFC209"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/icon43"
+                    android:text="0" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlayout_message_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5">
+
+                <ImageView
+                    android:id="@+id/personal_message_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/personal_message_icon" />
+
+                <ImageView
+                    android:id="@+id/personal_message_dot_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/personal_message_bg"
+                    android:layout_marginRight="3dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@drawable/personal_white_dot" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rlayout_schedule"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/rlayout_schedule_mypay_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvew_schedule_mypay"
+                    style="@style/Btn_Wrap_Black_Text_Sm"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:drawablePadding="5dip"
+                    android:drawableTop="@drawable/personal_schedule_pay"
+                    android:gravity="center"
+                    android:text="待付款" />
+
+                <TextView
+                    android:id="@+id/tvew_pay_tip_show"
+                    android:layout_width="14dip"
+                    android:layout_height="14dip"
+                    android:layout_alignRight="@+id/tvew_schedule_mypay"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/personal_schedule_num"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlayout_schedule_mydelivery_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvew_schedule_mydelivery"
+                    style="@style/Btn_Wrap_Black_Text_Sm"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:drawablePadding="5dip"
+                    android:drawableTop="@drawable/personal_schedule_delivery"
+                    android:gravity="center"
+                    android:text="待发货" />
+
+                <TextView
+                    android:id="@+id/tvew_delivery_tip_show"
+                    android:layout_width="14dip"
+                    android:layout_height="14dip"
+                    android:layout_alignRight="@+id/tvew_schedule_mydelivery"
+                    android:background="@drawable/personal_schedule_num"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlayout_schedule_myreceipt_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvew_schedule_myreceipt"
+                    style="@style/Btn_Wrap_Black_Text_Sm"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:drawablePadding="5dip"
+                    android:drawableTop="@drawable/personal_schedule_receipt"
+                    android:gravity="center"
+                    android:text="待收货" />
+
+                <TextView
+                    android:id="@+id/tvew_receipt_tip_show"
+                    android:layout_width="14dip"
+                    android:layout_height="14dip"
+                    android:layout_alignRight="@+id/tvew_schedule_myreceipt"
+                    android:background="@drawable/personal_schedule_num"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlayout_schedule_myreview_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvew_schedule_myreview"
+                    style="@style/Btn_Wrap_Black_Text_Sm"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:drawablePadding="5dip"
+                    android:drawableTop="@drawable/personal_schedule_review"
+                    android:gravity="center"
+                    android:text="待评价" />
+
+                <TextView
+                    android:id="@+id/tvew_review_tip_show"
+                    android:layout_width="14dip"
+                    android:layout_height="14dip"
+                    android:layout_alignRight="@+id/tvew_schedule_myreview"
+                    android:background="@drawable/personal_schedule_num"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlayout_schedule_myrefund_click"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvew_schedule_myrefund"
+                    style="@style/Btn_Wrap_Black_Text_Sm"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:drawablePadding="5dip"
+                    android:drawableTop="@drawable/personal_schedule_refund"
+                    android:gravity="center"
+                    android:text="退款/售后" />
+
+                <TextView
+                    android:id="@+id/tvew_schedule_myrefund_mask"
+                    style="@style/Text_Wrap_Black_Text_Sm"
+                    android:layout_width="40dip"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip" />
+
+                <TextView
+                    android:id="@+id/tvew_refund_tip_show"
+                    android:layout_width="14dip"
+                    android:layout_height="14dip"
+                    android:layout_alignRight="@+id/tvew_schedule_myrefund_mask"
+                    android:background="@drawable/personal_schedule_num"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/gray_white" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_order_click"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/common_write_btn_bg_selector">
+
+            <TextView
+                style="@style/Btn_Wrap_Black_Text_Title3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:drawableLeft="@drawable/personal_all_order"
+                android:drawablePadding="8dip"
+                android:text="全部订单" />
+
+            <TextView
+                style="@style/Text_Wrap_Gray_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/common_right_arrow"
+                android:text="查看全部商品" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_wallet_click"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/common_write_btn_bg_selector"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Btn_Wrap_Black_Text_Title3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:drawableLeft="@drawable/personal_wallet_money"
+                android:drawablePadding="8dip"
+                android:text="我的钱包" />
+
+            <TextView
+                style="@style/Text_Wrap_Gray_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/common_right_arrow" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rlayout_my_wallet_money_click"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="0.5dip"
+            android:background="@drawable/common_write_btn_bg_selector"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvew_wallet_amount_show"
+                    style="@style/Text_Wrap_Black_Text"
+                    android:text="¥ 0.00" />
+
+                <TextView
+                    style="@style/Text_Wrap_Black_Text"
+                    android:layout_marginTop="5dip"
+                    android:text="我的余额" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0.5dip"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray_white" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvew_wallet_freeze_amount_show"
+                    style="@style/Text_Wrap_Black_Text"
+                    android:text="¥ 0.00" />
+
+                <TextView
+                    style="@style/Text_Wrap_Black_Text"
+                    android:layout_marginTop="5dip"
+                    android:text="冻结金额" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlayout_giving_gift_click"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/common_write_btn_bg_selector">
+
+            <TextView
+                style="@style/Btn_Wrap_Black_Text_Title3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:drawableLeft="@drawable/user_send"
+                android:drawablePadding="8dip"
+                android:text="赠送掌声/拇指" />
+
+            <TextView
+                style="@style/Text_Wrap_Gray_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/common_right_arrow"
+                android:text="对商家评价" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_merchant_click"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/common_write_btn_bg_selector">
+
+            <TextView
+                style="@style/Btn_Wrap_Black_Text_Title3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:drawableLeft="@drawable/personal_merchant"
+                android:drawablePadding="8dip"
+                android:text="我是商家" />
+
+            <TextView
+                style="@style/Text_Wrap_Gray_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/common_right_arrow"
+                android:text="免费开店，轻松赚钱" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_free_click"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="0.5dip"
+            android:background="@drawable/common_write_btn_bg_selector">
+
+            <TextView
+                style="@style/Btn_Wrap_Black_Text_Title3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:drawableLeft="@drawable/personal_fabuxianzhi"
+                android:drawablePadding="8dip"
+                android:text="发布需求" />
+
+            <TextView
+                style="@style/Text_Wrap_Gray_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/common_right_arrow"
+                android:text="发布需求商品" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_jzb_click"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="0.5dip"
+            android:background="@drawable/common_write_btn_bg_selector">
+
+            <TextView
+                style="@style/Btn_Wrap_Black_Text_Title3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:drawableLeft="@drawable/icon39"
+                android:drawablePadding="8dip"
+                android:text="需求管理" />
+
+            <TextView
+                style="@style/Text_Wrap_Gray_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/common_right_arrow"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_help_click"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/common_write_btn_bg_selector">
+
+            <TextView
+                style="@style/Btn_Wrap_Black_Text_Title3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:drawableLeft="@drawable/personal_edit_help"
+                android:drawablePadding="8dip"
+                android:text="帮助与反馈" />
+
+            <TextView
+                style="@style/Text_Wrap_Gray_Text_Sm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/common_right_arrow"
+                android:text="联系趣那" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

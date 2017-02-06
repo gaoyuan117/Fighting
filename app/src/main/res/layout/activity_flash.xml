@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_pink"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_logo"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/splash_logo"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text16"
+        android:text="免费注册"
+        android:gravity="center"
+        android:background="@drawable/bg_button_main"
+        android:id="@+id/splash_btn_regist"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/splash_btn_regist"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/text_nomal"
+        android:textSize="@dimen/text16"
+        android:text="登录"
+        android:gravity="center"
+        android:background="@drawable/bg_nocolor"
+        android:id="@+id/splash_btn_login"/>
+
+</RelativeLayout>

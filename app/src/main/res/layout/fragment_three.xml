@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+  <include layout="@layout/titlebar_common"/>
+
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+      <RelativeLayout
+          android:id="@+id/fragment_three_ll_selfinfo"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:background="@color/white"
+          >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/fragment_three_sdv_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_image"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_three_tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/fragment_three_sdv_head"
+            android:text="昵称"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_three_tv_zhandouhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_three_tv_nickname"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/fragment_three_sdv_head"
+            android:text=""
+            android:textColor="@color/colorTextGray"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/more"/>
+
+
+      </RelativeLayout>
+
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_zichan"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/icon_zichan"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="资产"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_zichan"
+              android:layout_width="match_parent"
+
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:text="￥ 0.0"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_seller"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/icon_seller"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="我是卖家"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_seller"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_buyer"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/ic_buyer"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="我是买家"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_buyer"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_company"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/ic_company"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="我的企业"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_company"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_marry"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/ic_marry"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="结婚吧资料管理"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_marry"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <View
+          android:visibility="gone"
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_rent"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:visibility="gone"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/ic_rent"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="出租房屋信息发布管理"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_rent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+          android:visibility="gone"
+          android:id="@+id/fragment_three_ll_shiping"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/icon_shiping"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="视频"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_shiping"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+
+      <View
+          android:visibility="gone"
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:visibility="gone"
+          android:id="@+id/fragment_three_ll_xiangce"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/icon_xiangce"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="相册"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_xiangce"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_rizhi"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/icon_rizhi"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="日志"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_rizhi"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="6dp"/>
+
+      <LinearLayout
+          android:id="@+id/fragment_three_ll_shezhi"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@drawable/selector_item_press_white_btn"
+          android:clickable="true"
+          android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            fresco:placeholderImage="@drawable/icon_shezhi"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="设置"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/fragment_three_tv_shezhi"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|right"
+              android:maxLines="1"
+              android:paddingLeft="8dp"
+              android:textColor="@color/colorTextGray"/>
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:padding="6dp"
+              android:scaleType="centerInside"
+              android:src="@drawable/more"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/btn_three_exit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="30dp"
+          android:textSize="@dimen/dp_16"
+          android:textColor="@color/white"
+          android:background="@drawable/selector_item_press_red"
+          android:text="退出当前帐号"
+          />
+
+
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

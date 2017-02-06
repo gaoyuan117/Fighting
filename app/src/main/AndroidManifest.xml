@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xiangying.fighting"
+    tools:overrideLibrary="fm.jiecao.jcvideoplayer_lib">
+
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <!-- Required  屏幕点亮或解锁 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- Required  允许录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 拍照权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <!-- Required  屏幕点亮或解锁 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- Required  允许录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".common.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.login.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.two.findrent.FindRentActivity" />
+        <activity android:name="com.jock.pickerview.MainActivity" />
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1cae847eb0bf604dfb7ab92cb4785823" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".ui.two.findrent.RentDetailActivity" />
+
+        <!-- 查看大图浏览器 -->
+        <activity android:name=".widget.imagegallary.ImageGalleryActivity" />
+        <activity
+            android:name=".ui.two.findrent.NewRentActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.login.FlashActivity" />
+        <activity android:name=".ui.login.RegistGetCodeActivity" />
+        <activity android:name=".ui.login.SetPasswordActivity" />
+        <activity android:name=".ui.first.armygroup.CreatGroupActivity" />
+        <activity android:name=".ui.first.armygroup.AddFriendOrGroupActivity" />
+        <activity android:name=".ui.first.armyuser.SearchFriendResultActivity" />
+        <activity android:name=".ui.first.armygroup.GroupDetailActivity" />
+        <activity android:name=".ui.first.armygroup.GroupMembersActivity" />
+        <activity android:name=".ui.first.armyuser.FriendActivity" />
+        <activity android:name=".ui.first.talks.GridPhotoActivity" />
+        <activity android:name=".ui.two.findjob.SuccessPublishActivity" />
+
+        <!-- 环形appkey 以及环形相关服务广播注册 -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1165161212178803#atest" />
+
+        <!-- 声明环形sdk所需的service -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- <service android:name="com.hyphenate.chat.EMJobService" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE" -->
+        <!-- android:exported="true"/> -->
+        <!-- 声明环形sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <!-- gcm start -->
+        <receiver
+            android:name="com.hyphenate.chat.EMGCMBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.hyphenate.chatuidemo" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.hyphenate.chat.EMGCMListenerService"
+            android:exported="false" />
+
+        <activity android:name=".ui.first.armyuser.UserTalkDetailActivity" />
+        <activity android:name=".ui.first.armygroup.GroupTalkDetailActivity" />
+        <activity android:name=".ui.two.findrent.SuccessActivity" />
+        <activity android:name=".ui.two.findjob.FindJobActivity" />
+        <activity android:name=".ui.two.findjob.JobDetailActivity" />
+        <activity android:name=".ui.two.findjob.SearchJobActivity" />
+        <activity
+            android:name=".ui.chat.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.chat.activity.ContextMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name=".ui.chat.activity.EditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.chat.activity.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.chat.activity.GroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name=".ui.chat.activity.PickAtUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name=".ui.chat.videocall.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPRedPacketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPWebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPChangeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPBankCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPGroupMemberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.two.findjob.SearchResultActivity" />
+        <activity android:name=".ui.two.findjob.PublishNewJobActivity" />
+        <activity android:name=".ui.two.jiehun.MarryActivity" />
+        <activity android:name=".ui.two.jiehun.MarrySearchActivity" />
+        <activity android:name=".ui.two.jiehun.PersonInfoActivity" />
+        <activity android:name=".ui.two.jiehun.FahongbaoActivity" />
+        <activity android:name=".ui.two.jiehun.HongbaoSuccessActivity" />
+        <activity android:name=".ui.two.jianyi.JianyiActivity" />
+        <activity android:name=".ui.two.jiehun.WanshanActivity" />
+        <activity android:name=".ui.three.zichan.ZichanActivity" />
+        <activity android:name=".ui.three.selfinfo.SelfInfoActivity" />
+        <activity android:name=".ui.three.selfinfo.MNicknameActivity" />
+        <activity android:name=".ui.three.selfinfo.MSignActivity" />
+        <activity android:name=".ui.three.setting.SettingActivity" />
+        <activity android:name=".ui.three.setting.AboutUsActivity" />
+        <activity android:name=".ui.three.setting.YijianActivity" />
+        <activity android:name=".ui.three.selfinfo.UserAlbumActivity" />
+        <activity android:name=".ui.three.selfinfo.PublishNewAlbumActivity" />
+        <activity android:name=".ui.two.gongyi.GongyiDetailActivity" />
+        <activity android:name=".ui.two.gongyi.JuanKuanSuccessActivity" />
+        <activity android:name=".ui.two.gongyi.JuanzengListActivity" />
+        <activity android:name=".ui.first.armygroup.InviteAddGroupActivity" />
+        <activity android:name=".ui.first.armygroup.GroupFenzuActivity" />
+        <activity android:name=".ui.first.armygroup.GroupSetNameActivity" />
+        <activity android:name=".ui.first.talks.LookTalkContentActivity" />
+        <activity android:name=".ui.first.talks.ReportActivity" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity" />
+        <activity android:name=".ui.first.ApplyFriendActivity" />
+        <activity android:name=".ui.first.vedio.UploadActivity" />
+        <activity android:name=".ui.first.news.NewsDetailActivity" />
+        <activity android:name=".ui.three.selfinfo.PublishNewNoteActivity" />
+        <activity android:name=".ui.three.selfinfo.PublishNewVedioActivity" />
+        <activity android:name=".ui.three.selfinfo.UserNoteActivity" />
+        <activity android:name=".ui.three.selfinfo.UserVedioActivity" />
+        <!-- ======================================================== -->
+        <!-- ====================for mall============================ -->
+        <!-- ======================================================== -->
+        <activity
+            android:name="me.kw.mall.activity.TabHostActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.PaincBuyingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ProductDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ProductActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.CartActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyAddressActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ReviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.SearchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.NoticeDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.OrderEnsureActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ShopDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.AddReviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.BuyerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.HelpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyBrowseProductActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyFavoriteProductActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyFavoriteShopActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyShopOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyShopOrderDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.SellerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MoreReviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.OrderPayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.OrderSuccessActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.OrderRefundActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyShopActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ProtocolActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ShopSetActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ShopNameActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ShopIntroduceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.EditDescActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.EditOptionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ReleaseCommodityGoodsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.GoodsManageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.PanicBuyingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyOrderDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyMoreOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ServeHallActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.ShopFitmentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.SendGoodsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.OptionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.android.zcomponent.activity.RecordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.android.zcomponent.views.cropimage.CropImage"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.android.zcomponent.activity.EditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.CitySelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.AdWebViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="me.kw.mall.activity.MyAddressEditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.android.zcomponent.activity.ImageViewPagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.two.gongyi.GongyiListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".ui.three.zichan.BankActivity" />
+        <activity android:name=".ui.three.zichan.AddBankActivity" />
+        <activity android:name=".ui.three.zichan.DepositActivity" />
+        <activity android:name=".ui.first.vedio.UploadVideoActivity" />
+        <activity android:name=".ui.two.SystemNotifyActivity" />
+        <activity android:name=".ui.two.NewFriendsMsgActivity" />
+        <activity android:name=".ui.first.talks.UserFromListActivity" />
+        <activity android:name=".ui.chat.activity.GroupPickContactsActivity" />
+        <activity android:name=".ui.first.sharehouse.ShareHouseDetailActivity" />
+        <activity android:name=".ui.three.company.CompanyActivity" />
+        <activity android:name=".ui.three.company.CompanyInfoActivity" />
+        <activity android:name=".ui.three.company.CompanyJobActivity" />
+        <activity android:name="me.kw.mall.activity.HelpDetailActivity" />
+        <activity android:name=".ui.two.findjob.JobCategoryActivity" />
+        <activity android:name=".ui.three.zichan.TransferActivity" />
+        <activity android:name=".ui.two.findrent.RentListActivity" />
+        <activity android:name=".ui.three.zichan.RechargeActivity" />
+        <activity android:name=".ui.three.zichan.RenZhengActivity" />
+        <activity android:name=".ui.three.zichan.RenZhengSuccessActivity" />
+        <activity android:name=".ui.three.selfinfo.AllNoteActivity" />
+        <activity android:name=".ui.first.armygroup.GroupCardActivity" />
+        <activity android:name=".ui.three.zichan.ShopRechargeActivity" />
+        <activity android:name=".ui.three.zichan.ChongZhiActivity" />
+        <activity android:name=".ui.three.zichan.TiXianActivity" />
+        <activity android:name=".ui.three.setting.HelpActivity" />
+        <activity android:name=".ui.three.zichan.ZiJinDetailActivity"></activity>
+    </application>
+
+</manifest>

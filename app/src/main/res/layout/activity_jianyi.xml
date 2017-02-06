@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.two.jianyi.JianyiActivity">
+
+    <include layout="@layout/titlebar_common"/>
+    
+    <com.xiangying.fighting.widget.ClearEditText
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_state_normal_white_btn"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="left"
+        android:padding="10dp"
+        android:hint="您的建议对我们有很大帮助"
+        android:id="@+id/activity_et_jianyi_content"
+        android:textSize="14sp"
+        />
+    <com.xiangying.fighting.widget.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="提交"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_item_press_red"
+        android:layout_marginTop="20dp"
+        android:id="@+id/activity_et_jianyi_commit"
+        android:clickable="true"
+        />
+    
+</LinearLayout>

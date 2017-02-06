@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="充值"
+        android:textColor="#C30606"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_dialog_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="numberDecimal"
+        android:hint="请输入充值金额" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/bt_dialog_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_nocorner"
+            android:text="取消"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bt_dialog_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_nocorner"
+            android:text="确定"
+            android:textColor="@color/white" />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

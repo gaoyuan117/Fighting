@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.two.findjob.SearchResultActivity">
+
+    <include layout="@layout/titlebar_common_search"/>
+
+    <LinearLayout
+        android:layout_marginBottom="0.5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <RelativeLayout
+            android:id="@+id/activity_findrent_rl_quyu"
+            android:background="@drawable/selector_left_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <com.xiangying.fighting.widget.FontTextView
+                android:id="@+id/activity_findrent_tv_quyu"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorTextBlank"
+                android:text="区域"/>
+            <ImageView
+                android:id="@+id/activity_findrent_img_quyu"
+                android:src="@drawable/xiala"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/activity_findrent_tv_quyu"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/activity_findrent_rl_xingzi"
+            android:background="@drawable/selector_left_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <com.xiangying.fighting.widget.FontTextView
+                android:id="@+id/activity_findrent_tv_xingzi"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorTextBlank"
+                android:text="薪资"/>
+            <ImageView
+                android:id="@+id/activity_findrent_img_xingzi"
+                android:src="@drawable/xiala"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/activity_findrent_tv_xingzi"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/activity_findrent_rl_money"
+            android:background="@drawable/selector_left_normal"
+            android:padding="1dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <com.xiangying.fighting.widget.FontTextView
+                android:id="@+id/activity_findrent_tv_money"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorTextBlank"
+                android:text="租金"/>
+            <ImageView
+                android:id="@+id/activity_findrent_img_money"
+                android:src="@drawable/xiala"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/activity_findrent_tv_money"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
+
+    <include layout="@layout/commen_layout_pulltolistview"/>
+</LinearLayout>

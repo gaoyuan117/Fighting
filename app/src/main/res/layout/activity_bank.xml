@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_common" />
+
+    <com.xiangying.fighting.widget.OverScrollView
+        android:id="@+id/activity_bank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="5dp"
+                android:text="已绑定银行卡"
+                android:textColor="@color/text_black" />
+
+            <View
+                style="@style/devide_line_eee"
+                android:layout_marginBottom="@dimen/dp_8" />
+
+            <com.xiangying.fighting.widget.NoScrollerListView
+                android:id="@+id/list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_bank_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/tv_add_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/icon_add_bank"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_12"
+                android:text="+ 添加银行卡"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/dp_16" />
+
+        </LinearLayout>
+    </com.xiangying.fighting.widget.OverScrollView>
+</LinearLayout>

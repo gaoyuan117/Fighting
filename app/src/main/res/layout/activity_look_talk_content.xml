@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.first.talks.LookTalkContentActivity">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_bar_common_rv_viewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_white"
+            android:padding="15dp"
+            android:id="@+id/img_back"/>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="30dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:textColor="@color/text_nomal"
+                android:textSize="@dimen/text14"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxLength="15"
+                android:hint="请输入关键字查找"
+                android:singleLine="true"
+                android:textColorHint="@color/text_grey3"
+                android:id="@+id/look_talk_et_search"
+                android:background="@drawable/edit_bg_write2"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gapColor"
+        android:dividerHeight="0.5dip"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#13000000"
+        android:id="@+id/common_listview_show"/>
+</LinearLayout>

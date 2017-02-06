@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.three.zichan.ZichanActivity">
+
+    <include layout="@layout/titlebar_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/colorTextRed"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    fresco:placeholderImage="@drawable/icon_total_zichan" />
+
+                <com.xiangying.fighting.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="总资产"
+                    android:textColor="@color/white" />
+
+                <com.xiangying.fighting.widget.FontTextView
+                    android:id="@+id/activity_zichan_tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/activity_zichan_ll_yue_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_yue_me"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/yue" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_yue_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/sdv_yue_me"
+                        android:text="个人账户余额" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_yue_num_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_yue_me"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_yue_me"
+                        android:text=""
+                        android:textColor="@color/colorTextGray" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gapColor" />
+
+                <RelativeLayout
+                    android:id="@+id/activity_zichan_ll_yue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_yue"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/yue" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_yue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/sdv_yue"
+                        android:text="商家保证金" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_yue_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_yue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_yue"
+                        android:text=""
+                        android:textColor="@color/colorTextGray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gapColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+
+                    android:id="@+id/activity_zichan_ll_tuandui"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_tuandui"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/tuanduixiaofei" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_tuandui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/sdv_tuandui"
+                        android:text="团队消费总额" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_tuandui_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_tuandui"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_tuandui"
+                        android:text="￥2000"
+                        android:textColor="@color/colorTextGray" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gapColor" />
+
+                <RelativeLayout
+                    android:id="@+id/activity_zichan_ll_tuanzhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_tuanzhu"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/tuanzhujiangli" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_tuanzhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/sdv_tuanzhu"
+                        android:text="团主奖励金额" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_tuanzhu_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_tuanzhu"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_tuanzhu"
+                        android:text="￥100"
+                        android:textColor="@color/colorTextGray" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gapColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+
+                    android:id="@+id/activity_zichan_ll_zhuanzhang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_zhuanzhang"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/zhuanzhang" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_zhuanzhang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@id/sdv_zhuanzhang"
+                        android:text="转账" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_zhuanzhang_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_zhuanzhang"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_zhuanzhang"
+                        android:text="给战友转账"
+                        android:textColor="@color/colorTextGray"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gapColor" />
+
+                <RelativeLayout
+
+                    android:id="@+id/activity_zichan_ll_yinghangka"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_yinghangka"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/yinghangka" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_yinghangka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/sdv_yinghangka"
+                        android:text="银行卡" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_yinghangka_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_yinghangka"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_yinghangka"
+                        android:text=""
+                        android:textColor="@color/colorTextGray" />
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gapColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/activity_zichan_ll_baozhengjin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_baozhengjin"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/baozhengjin" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_baozhengjin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/sdv_baozhengjin"
+                        android:text="我的保证金" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_baozhengjin_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_baozhengjin"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_baozhengjin"
+                        android:text="￥2000"
+                        android:textColor="@color/colorTextGray" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/activity_zichan_rl_cz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_cz"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="fitXY"
+                        fresco:placeholderImage="@drawable/chongzhi" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_text_cz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@id/sdv_cz"
+                        android:text="充值" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gapColor" />
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gapColor" />
+
+                <RelativeLayout
+
+                    android:id="@+id/activity_zichan_ll_tixian"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_tixian"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/tixian" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_tixian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@id/sdv_tixian"
+                        android:text="提现" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_tixian_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_tixian"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/sdv_tixian"
+                        android:text="提现到银行卡"
+                        android:textColor="@color/colorTextGray"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gapColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/activity_zichan_rl_rz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_press_white_btn"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_renzheng"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        fresco:placeholderImage="@drawable/renzheng" />
+
+                    <com.xiangying.fighting.widget.FontTextView
+                        android:id="@+id/tv_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_toRightOf="@id/sdv_renzheng"
+                        android:text="实名认证" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gapColor" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

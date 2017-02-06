@@ -1,0 +1,12 @@
+include ':app', ":PickerView", ":multi-image-selector", ':easeuis', ':redpacketlibrary',
+    ':AndroidZFramework', ':AndroidZHttp', ':AndroidZQccode', ':AndroidZUtils',
+    ':AndroidZComponent', ':AndroidZPlayer', ':AndroidZShare', ':ExpandTextView'
+project(':AndroidZFramework').projectDir = new File(settingsDir, '../FightingLibs/AndroidZFramework')
+project(':AndroidZHttp').projectDir = new File(settingsDir, '../FightingLibs/AndroidZHttp')
+project(':AndroidZQccode').projectDir = new File(settingsDir, '../FightingLibs/AndroidZQccode')
+project(':AndroidZUtils').projectDir = new File(settingsDir, '../FightingLibs/AndroidZUtils')
+project(':AndroidZComponent').projectDir = new File(settingsDir, '../FightingLibs/AndroidZComponent')
+project(':AndroidZPlayer').projectDir = new File(settingsDir, '../FightingLibs/AndroidZPlayer')
+project(':AndroidZShare').projectDir = new File(settingsDir, '../FightingLibs/AndroidZShare')
+project(':easeuis').projectDir = new File(settingsDir, '../FightingLibs/easeuis')
+//project(':redpacketlibrary').projectDir = new File(settingsDir, '../FightingLibs/easeuis')

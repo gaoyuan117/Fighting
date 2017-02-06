@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:id="@+id/fragment_jianjie_tv_company"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:background="@color/white"
+          android:ellipsize="end"
+          android:gravity="center_vertical"
+          android:maxLines="1"
+          android:paddingLeft="16dp"
+          tools:text="北京创天科技有限公司"
+          android:textStyle="bold"
+          />
+
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="联系方式"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gapColor"/>
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_jianjie_tv_linkman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="16dp"
+            tools:text="联系人：李女士"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_jianjie_tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="16dp"
+            tools:text="联系电话：18890987623"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_jianjie_tv_company_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="16dp"
+            tools:text="公司电话：010-7631141"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_jianjie_tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            tools:text="公司地址：北京 - 丰台区 - 西客站 - 广安路9号国投财富广场2号楼16层"
+            />
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="公司简介"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gapColor"/>
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_jianjie_tv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            tools:text="最有爱会玩的团队
+这是一个近300人的“伐木累”，扎根中国北京、美国硅谷，其中有来自微软、华为、MOTO、SONY、IBM的爱折腾的老家伙，有刚从清华、北大、北航、北邮火热出炉的小鲜肉，更有一言不合就发红包的CEO。
+Why Pico？
+管理扁平——和冗长的会议、繁琐的流程Say Bye，你的创造力不该被束缚。
+待遇优渥——Pico希望工作之外满足你的各种“买买买”。
+团队专业——核心成员多为2012年便步入VR行业的大咖牛人。
+新兴行业——时至今日，再不VR你就out啦！
+我们欢迎耿直中二又凡事较真的你，
+    欢迎元气满满、萌不自知的你，
+    欢迎有点玻璃心有点不服输的你，
+    欢迎明明可以靠脸却偏偏才华横溢的你。
+Pico在等你，这里很VR！"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+      </LinearLayout>
+    </LinearLayout>
+
+  </ScrollView>
+</LinearLayout>

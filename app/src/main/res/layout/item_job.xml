@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/selector_item_press_white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        >
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="室内设计师"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/item_job_tv_position"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成都九霄科技有限公司"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:layout_below="@id/item_job_tv_position"
+            android:id="@+id/item_job_tv_company"
+            />
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成都"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:textColor="@color/colorTextGray"
+            android:layout_below="@id/item_job_tv_company"
+            android:id="@+id/item_job_tv_location"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5000-10000"
+            android:layout_marginLeft="10dp"
+            android:textSize="13sp"
+            android:layout_alignBottom="@id/item_job_tv_location"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorTextRed"
+            android:id="@+id/item_job_tv_salary"
+            />
+       <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天"
+            android:layout_marginLeft="10dp"
+            android:textSize="13sp"
+            android:layout_alignBottom="@id/item_job_tv_position"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorTextGray"
+            android:id="@+id/item_job_tv_date"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

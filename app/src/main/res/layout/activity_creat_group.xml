@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/title_bar_common_tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_click"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/title_bar_common_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="创建军团"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/title_bar_common_iv_operate_1"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_item_press_touming"
+            android:clickable="true"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_white" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/creatgroup_edt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_bg_write"
+        android:hint="给您的军团起一个响亮的名字"
+        android:maxLength="20"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/text_nomal"
+        android:textColorHint="@color/colorTextGray"
+        android:textSize="@dimen/text14" />
+
+    <EditText
+        android:id="@+id/creatgroup_num"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edit_bg_write"
+        android:focusable="false"
+        android:hint="选择的团号（可不选）"
+        android:maxLength="20"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/text_nomal"
+        android:textColorHint="@color/colorTextGray"
+        android:textSize="@dimen/text14"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/creatgroup_fra"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/creatgroup_img_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_click"
+            android:src="@drawable/toux"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/toux" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="5dp"
+            android:text="上传头像"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text14" />
+    </FrameLayout>
+
+    <Button
+
+        android:id="@+id/btn_recharge_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_recharge"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg_nocorner"
+        android:onClick="onClick"
+        android:text="生成战斗团号"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_creat_group_ts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="10dp"
+        android:text="注意：选择一个号码作为战斗团号将收取100元手续费，可不选"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text12"
+        android:visibility="gone" />
+
+    <ListView
+
+        android:id="@+id/lv_creat_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

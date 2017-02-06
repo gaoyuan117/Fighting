@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:background="@color/white"
+          android:gravity="center_vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_gangwei_tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="室内设计师"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_gangwei_tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_gangwei_tv_position"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorTextRed"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="5000-10000"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_gangwei_tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_gangwei_tv_money"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorTextGray"
+            android:textSize="13sp"
+            tools:text="成都"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_gangwei_tv_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fragment_gangwei_tv_location"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorTextRed"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:text="5000-10000"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_gangwei_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fragment_gangwei_tv_position"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorTextGray"
+            android:textSize="13sp"
+            tools:text="今天"/>
+
+      </RelativeLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="岗位职责"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gapColor"/>
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_gangwei_tv_zhize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            tools:text="1、负责公司核心产品的策划、和整体规划工作；
+
+2、梳理产品主线。通过目标用户的访谈、需求调研。挖掘潜在用户需求，能理解目标用户的真正诉求并融入到产品设计中；
+
+3、组织协调技术/UI/UE以及跨部门的产品协调工作，并推动和保障项目按计划完成；
+
+4、负责产品需求撰写和原型设计，协调各部门资源，推动产品开发、测试、验收和发布。"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="8dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="任职条件"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gapColor"/>
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragment_gangwei_tv_tiaojian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            tools:text="1、大学本科以上学历；
+
+2、至少3年以上互联网公司产品经理工作经验；
+
+3、具备独立撰写产品文档的能力，熟练掌握产品需求分析、用户调研、和设计技巧；
+
+4、较深的互联网产品的理解力，敏锐的把握用户需求，较高的市场敏感度，优秀的产品策划能力；
+
+5、沟通、协调能力较强，有良好的合作意识；
+
+6、抗压能力强、有良好的用户体验设计能力；
+
+7、有互联网金融类、社交类产品经验优先。"
+            />
+
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="80dp"/>
+
+    </LinearLayout>
+  </ScrollView>
+
+</LinearLayout>

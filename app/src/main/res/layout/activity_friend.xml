@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/layout_bg"
+>
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/titlebar_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_detail_img_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            fresco:placeholderImage="@drawable/ic_logo"
+            fresco:actualImageScaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_toRightOf="@+id/user_detail_img_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text14"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/group_detail_tv_name"
+            android:textColor="@color/text_nomal"
+            android:text="卡哇伊"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/user_detail_img_avatar"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@+id/user_detail_img_avatar"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="@dimen/text14"
+            android:id="@+id/group_detail_tv_id"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorTextGray"
+            android:text="战斗号：ZDH518122"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/click_bg_write"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_liner_photo"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text14"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/text_nomal"
+            android:text="个人相册"/>
+
+        <ImageView
+            android:id="@+id/group_detail_img_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/more"/>
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/click_bg_write"
+    android:layout_marginTop="8dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/user_liner_address"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text14"
+        android:singleLine="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/text_nomal"
+        android:text="地区"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text14"
+        android:singleLine="true"
+        android:id="@+id/user_tv_address"
+        android:textColor="@color/colorTextGray"
+        android:text="北京"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/click_bg_write"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_liner_sex"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text14"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/text_nomal"
+            android:text="性别"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text14"
+            android:singleLine="true"
+            android:id="@+id/user_tv_sex"
+            android:textColor="@color/text_nomal"
+            android:text="男"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/click_bg_write"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_liner_sign"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text14"
+            android:singleLine="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/text_nomal"
+            android:text="个性签名"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text14"
+            android:singleLine="true"
+            android:id="@+id/user_tv_sign"
+            android:textColor="@color/text_nomal"
+            android:text="2015，继续加油"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/user_liner_isfriend"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/splash_logo"
+            android:textColor="@color/text_nomal"
+            android:textSize="@dimen/text16"
+            android:text="删除好友"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/click_bg_write"
+            android:id="@+id/user_btn_delete"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/splash_logo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text16"
+            android:text="发消息"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/btn_bg_nocorner"
+            android:id="@+id/user_btn_send"/>
+        </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/splash_logo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text16"
+        android:text="添加好友"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="@drawable/btn_bg_nocorner"
+        android:id="@+id/user_btn_add"/>
+</LinearLayout>

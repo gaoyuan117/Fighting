@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      tools:context=".ui.two.jiehun.MarryActivity">
+
+    <include layout="@layout/titlebar_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white">
+
+      <LinearLayout
+          android:id="@+id/activity_marry_laopo_ll"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          >
+
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_marry_laopo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="找老婆"
+            android:textColor="@color/colorTextBlank"
+            android:textSize="15sp"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_marry_laopo_gap"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:background="@color/colorPrimary"
+            />
+      </LinearLayout>
+
+      <com.xiangying.fighting.widget.FontTextView
+          android:layout_width="1dp"
+          android:layout_height="match_parent"
+
+          android:layout_marginBottom="8dp"
+          android:layout_marginTop="8dp"
+          />
+
+      <LinearLayout
+          android:id="@+id/activity_marry_laogong_ll"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          >
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_marry_laogong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="找老公"
+            android:textColor="@color/colorTextBlank"
+            android:textSize="15sp"
+            />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/activity_marry_laogong_gap"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:background="@color/colorPrimary"
+            />
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_marry_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+  </LinearLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="46dp"
+      android:layout_alignParentBottom="true"
+      android:visibility="gone"
+      android:background="#c3000000"
+      >
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_marry_liaojie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:text="完善资料，早日找到你的心仪人"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+
+    <com.xiangying.fighting.widget.FontTextView
+        android:id="@+id/activity_marry_wanshan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_item_press_white_btn"
+        android:clickable="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:text="完善资料"
+        android:textColor="@color/colorTextRed"
+        />
+
+  </RelativeLayout>
+</RelativeLayout>

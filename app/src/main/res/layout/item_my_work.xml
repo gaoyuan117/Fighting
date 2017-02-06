@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tb_job_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="15sp"
+        tools:text="招聘设计师助理"/>
+
+    <TextView
+        android:id="@+id/tb_job_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        android:visibility="gone"
+        tools:text="12-3"/>
+
+    <TextView
+        android:id="@+id/tb_job_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tb_job_title"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        android:textSize="13sp"
+        tools:text="背景久久科技"/>
+
+    <TextView
+        android:id="@+id/tb_job_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tb_job_company"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        android:textSize="13sp"
+        tools:text="太原市"/>
+
+    <TextView
+        android:id="@+id/tb_job_treament"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tb_job_company"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red"
+        android:textSize="13sp"
+        tools:text="100000W"/>
+
+  </RelativeLayout>
+
+  <View
+      style="@style/devide_line_eee"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_job_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:textColor="#333333"
+        android:text="删除"
+        />
+
+    <TextView
+        android:id="@+id/tv_job_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_toLeftOf="@+id/tv_job_delete"
+        android:textColor="#333333"
+        android:text="编辑"
+        />
+
+  </RelativeLayout>
+</LinearLayout>

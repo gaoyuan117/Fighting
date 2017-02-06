@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_bar_common_rv_viewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="5dp"
+         >
+            <EditText
+                android:layout_width="match_parent"
+                android:textColor="@color/text_nomal"
+                android:hint="搜索账号/名称"
+                android:textSize="@dimen/text14"
+                android:paddingLeft="35dp"
+                android:paddingRight="10dp"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColorHint="@color/text_grey3"
+                android:id="@+id/fragmentone_edit_search"
+                android:background="@drawable/edit_bg_write2"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_search"/>
+            </FrameLayout>
+
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragmentone_tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/edit_bg_write"
+            android:textColor="@color/main_color"
+            android:text="搜索"
+            android:textSize="16sp" />
+
+        <com.xiangying.fighting.widget.FontTextView
+            android:id="@+id/fragmentone_tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/bg_click"
+            android:textColor="@color/white"
+            android:text="添加战友"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:id="@+id/fragment_frist_img_vedio"
+            android:paddingRight="15dp"
+            android:background="@drawable/bg_click"
+            android:src="@drawable/icon_vedio"
+            android:visibility="gone"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragmentone_tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        style="@style/FragmengOneTabStyle" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragmentone_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

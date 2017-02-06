@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:gravity="center"
+              android:layout_height="wrap_content">
+
+
+  <com.xiangying.fighting.widget.FontTextView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/tv_news_category"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:layout_margin="@dimen/dp_8"
+      android:orientation="vertical"
+      android:text="23242">
+
+  </com.xiangying.fighting.widget.FontTextView>
+
+</LinearLayout>

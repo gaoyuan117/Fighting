@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <com.xiangying.fighting.widget.FontTextView
+      android:id="@+id/tv_upload_video"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="25dp"
+      android:layout_marginRight="25dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/edit_bg_grey"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="上传视频"
+      android:textColor="@color/gray"
+      android:textSize="15sp"/>
+
+  <com.xiangying.fighting.widget.FontTextView
+      android:id="@+id/tv_upload_image"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="25dp"
+      android:layout_marginRight="25dp"
+      android:layout_marginTop="12dp"
+      android:background="@drawable/edit_bg_grey"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="上传照片"
+      android:textColor="@color/gray"
+      android:textSize="15sp"/>
+
+  <com.xiangying.fighting.widget.FontTextView
+      android:id="@+id/tv_upload_cancel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="25dp"
+      android:layout_marginRight="25dp"
+      android:layout_marginTop="12dp"
+      android:background="@drawable/edit_bg_grey"
+      android:gravity="center"
+      android:padding="10dp"
+      android:layout_marginBottom="@dimen/dp_16"
+      android:text="取消"
+      android:textColor="@color/gray"
+      android:textSize="15sp"/>
+
+</LinearLayout>

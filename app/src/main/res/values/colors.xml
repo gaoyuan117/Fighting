@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--主题颜色红色，标题栏红色，红色字体-->
+    <color name="colorPrimary">#B80012</color>
+
+    <color name="colorPrimaryDark">#8f0f13</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 页面通用背景色 -->
+    <color name="windowBackground">#E8E8E8</color>
+    <!--蓝色字体，蓝色按钮背景-->
+    <color name="colorBlue">#226AA3</color>
+    <!--灰色字体-->
+    <color name="colorTextGray">#8F8F8F</color>
+
+    <!--绿色字体-->
+    <color name="colorTextGreen">#0cb61a</color>
+
+    <!--黑色字体字体-->
+    <color name="colorTextBlank">#000000</color>
+
+    <!--白色字体-->
+    <color name="colorTextWhite">#ffffff</color>
+    <!--黄色字体-->
+    <color name="colorTextYellow">#D4C536</color>
+
+    <!--分割线通用灰色-->
+    <color name="gapColor">#eaeaea</color>
+    <!--红色字体-->
+    <color name="colorTextRed">#B80012</color>
+
+
+
+    <color name="popup_left_bg">#ffffff</color>
+    <color name="popup_right_bg">#f6f6f6</color>
+
+
+    <!--占位图-->
+    <color name="placeholderImage">#dedcdc</color>
+    <!--透明-->
+    <color name="color_touming">#00000000</color>
+
+    <color name="color_pressed">#cfffebeb</color>
+
+    <!--主色调 深暗红-->
+    <color name="main_color">#c40b2b</color>
+    <!--主色调 深红-->
+    <color name="main_color2">#c30606</color>
+    <!--主色调 深红透明度一半-->
+    <color name="main_halfcolor">#80c40b2b</color>
+    <!--主色调 粉色-->
+    <color name="main_pink">#fce2e2</color>
+    <color name="main_halfpink">#80fce2e2</color>
+    <!--字体色 一般字体-->
+    <color name="text_nomal">#333333</color>
+    <!--字体色 灰色1 -->
+    <color name="text_grey">#666666</color>
+    <!--字体色 灰色2 -->
+    <color name="text_grey2">#999999</color>
+    <!--字体色 灰色3 -->
+    <color name="text_grey3">#cccccc</color>
+    <!--淡背景色 -->
+    <color name="bg_main">#eeeeee</color>
+    <!--淡背景色2 -->
+    <color name="layout_bg">#ebebeb</color>
+    <!--浅蓝 -->
+    <color name="blue_1">#107acc</color>
+</resources>
