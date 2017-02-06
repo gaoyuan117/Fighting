@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.xiangying.fighting"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'fighting'
+            keyPassword '123456'
+            storeFile file('keystore/xiangying.jks')
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+//        jumboMode = true
+//        incremental false
+//        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile files('libs/butterknife-7.0.1.jar')
+    compile files('libs/gson-1.7.1.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.orhanobut:logger:1.8'
+    compile project(':PickerView')
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
+    compile 'com.github.hotchemi:permissionsdispatcher:2.1.3'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.1.3'
+    compile project(':multi-image-selector')
+    compile 'com.android.support:design:23.2.1'
+    //    compile project(':ChatUtils')
+    compile project(':easeuis')
+    compile project(':AndroidZUtils')
+    compile project(':AndroidZComponent')
+    compile project(':AndroidZFramework')
+    compile project(':AndroidZQccode')
+    compile project(':AndroidZUtils')
+    compile project(':AndroidZPlayer')
+    compile project(':AndroidZHttp')
+    compile project(':AndroidZShare')
+    compile project(path: ':easeuis')
+    compile project(path: ':redpacketlibrary')
+    compile 'fm.jiecao:jiecaovideoplayer:5.1'
+    compile project(':ExpandTextView')
+}
