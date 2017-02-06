@@ -1,8 +1,10 @@
 package com.xiangying.fighting.ui.three.zichan;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -13,6 +15,7 @@ import com.xiangying.fighting.widget.FontTextView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.Bind;
@@ -35,7 +38,7 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
     @Bind(R.id.lv_zjdetail_show)
     ListView mListView;
 
-    private String startTime, endTime;//开始时间，结束时间
+    private String startTime, endTime, time, type;//开始时间，结束时间
     private List<ZiJinDetailBean> mList;
     private ZiJinDetailAdapter mAdapter;
 
@@ -58,7 +61,7 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
      */
     private void initView() {
         mList = new ArrayList<>();
-        mAdapter = new ZiJinDetailAdapter(this,mList);
+        mAdapter = new ZiJinDetailAdapter(this, mList);
         mListView.setAdapter(mAdapter);
     }
 
@@ -81,6 +84,8 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
      */
     private void setListener() {
         mSearch.setOnClickListener(this);
+        mStart.setOnClickListener(this);
+        mEnd.setOnClickListener(this);
     }
 
     /**
@@ -113,6 +118,48 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View view) {
-        //TODO 请求数据
+        switch (view.getId()) {
+            case R.id.tv_zjdetail_start://开始时间
+                showDateDialog();
+                type = "start";
+                break;
+            case R.id.tv_zjdetail_end://结束时间
+                showDateDialog();
+                type = "end";
+                break;
+
+            case R.id.tv_zjdetail_search://搜索
+                startTime = mStart.getText().toString().trim();
+                endTime = mEnd.getText().toString().trim();
+
+                //TODO 请求数据
+                initData();
+                break;
+        }
     }
+
+    /**
+     * 显示日期对话框
+     */
+    private void showDateDialog() {
+        Calendar calendar = Calendar.getInstance();
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                ZiJinDetailActivity.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view,
+                                  int year, int monthOfYear,
+                                  int dayOfMonth) {
+                if (type.equals("start")) {
+                    mStart.setText(year + "年-" + (monthOfYear + 1) + "月-" + dayOfMonth + "日");
+                } else if (type.equals("end")) {
+                    mEnd.setText(year + "年-" + (monthOfYear + 1) + "月-" + dayOfMonth + "日");
+                }
+            }
+        }, calendar.get(Calendar.YEAR), calendar
+                .get(Calendar.MONTH), calendar
+                .get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.setCancelable(true);
+        datePickerDialog.show();
+    }
+
 }

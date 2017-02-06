@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/tv_item_zjd_time"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/tv_item_zjd_source"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/tv_item_zjd_money"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
