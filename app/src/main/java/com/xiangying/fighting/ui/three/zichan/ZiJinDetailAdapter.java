@@ -21,10 +21,10 @@ import butterknife.ButterKnife;
 
 public class ZiJinDetailAdapter extends BaseAdapter {
     private Context context;
-    private List<ZiJinDetailBean> mList;
+    private List<ZiJinDetailBean.DataBean> mList;
     private LayoutInflater mInflater;
 
-    public ZiJinDetailAdapter(Context context, List<ZiJinDetailBean> mList) {
+    public ZiJinDetailAdapter(Context context, List<ZiJinDetailBean.DataBean> mList) {
         this.context = context;
         this.mList = mList;
         mInflater = LayoutInflater.from(context);
@@ -49,16 +49,16 @@ public class ZiJinDetailAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder vh;
         if (view == null) {
-            view = mInflater.inflate(R.layout.item_lv_zjdetail, viewGroup,false);
+            view = mInflater.inflate(R.layout.item_lv_zjdetail, viewGroup, false);
             vh = new ViewHolder(view);
             view.setTag(vh);
         } else {
             vh = (ViewHolder) view.getTag();
         }
 
-        vh.mTime.setText(mList.get(i).time);
-        vh.mSource.setText(mList.get(i).source);
-        vh.mMoney.setText(mList.get(i).money);
+        vh.mTime.setText(mList.get(i).getCre_time());
+        vh.mSource.setText(mList.get(i).getSource());
+        vh.mMoney.setText(mList.get(i).getAmount());
 
         return view;
     }

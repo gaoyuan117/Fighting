@@ -62,7 +62,7 @@
             android:layout_marginLeft="10dp"
             android:background="@null"
             android:hint="请输入金额"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:maxLength="11"
             android:textSize="16sp" />
     </LinearLayout>

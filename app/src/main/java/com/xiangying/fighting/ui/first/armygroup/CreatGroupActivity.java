@@ -29,15 +29,11 @@ import com.xiangying.fighting.bean.HasGroupBean;
 import com.xiangying.fighting.bean.ImageFileBean;
 import com.xiangying.fighting.common.BaseActivity;
 import com.xiangying.fighting.ui.first.talks.CreatGroupBean;
-import com.xiangying.fighting.ui.first.talks.GroupNumBean;
 import com.xiangying.fighting.ui.three.zichan.RechargeActivity;
 import com.xiangying.fighting.utils.NetworkTools;
 import com.xiangying.fighting.utils.Utils;
 import com.xiangying.fighting.utils.XUtilsHelper;
 import com.xiangying.fighting.widget.FontTextView;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,30 +82,6 @@ public class CreatGroupActivity extends BaseActivity {
     private List<Integer> mList;
     private String mId;
 
-    private Handler mHandler = new Handler(new Handler.Callback() {
-        @Override
-        public boolean handleMessage(Message msg) {
-            xHelper.hideProgress();
-            switch (msg.what) {
-                case XUtilsHelper.TAG_SUCCESS:
-                    Utils.showHintByMsg(CreatGroupActivity.this, msg.obj.toString());
-                    try {
-                        JSONObject object = new JSONObject(msg.obj.toString());
-                        if (object.optInt("code") == 1) {
-
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    break;
-                case XUtilsHelper.TAG_FAILURE:
-                    Utils.toast(CreatGroupActivity.this, "获取失败，请稍后再试");
-                    break;
-            }
-            return false;
-        }
-    });
-
 
     @Override
     protected void process() {
@@ -139,6 +111,16 @@ public class CreatGroupActivity extends BaseActivity {
 
 
                 if (type.equals("group")) {
+                    mId = mGroupNum.getText().toString().trim();
+                    if (!TextUtils.isEmpty(mId) && mId.length() < 5) {
+                        Toast.makeText(CreatGroupActivity.this, "战斗团号至少填写5位", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    if (selectImagePath.size() == 0) {
+                        Toast.makeText(CreatGroupActivity.this, "请选择一张图片作为你的战斗团头像", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
                     XUtilsHelper xUtilsHelper = new XUtilsHelper(CreatGroupActivity.this, NetworkTools.UPLOAD_Image_app, new Handler(new Handler.Callback() {
                         @Override
                         public boolean handleMessage(Message msg) {
@@ -150,6 +132,8 @@ public class CreatGroupActivity extends BaseActivity {
                                     } else {
                                         isFirstCreat(reslut.getData());
                                     }
+                                } else {
+                                    Toast.makeText(CreatGroupActivity.this, "请选择一张图片作为军团头像", Toast.LENGTH_SHORT).show();
                                 }
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -177,12 +161,6 @@ public class CreatGroupActivity extends BaseActivity {
             }
         });
 
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                creatZDTH();
-            }
-        });
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -212,27 +190,6 @@ public class CreatGroupActivity extends BaseActivity {
                     }
                 }).create();
         dialog.show();
-    }
-
-    /**
-     * 生成战斗团号
-     */
-    private void creatZDTH() {
-        XUtilsHelper xUtilsHelper = new XUtilsHelper(CreatGroupActivity.this, NetworkTools.GET_NUM, new Handler(new Handler.Callback() {
-            @Override
-            public boolean handleMessage(Message msg) {
-                GroupNumBean numBean = (GroupNumBean) msg.obj;
-                if (numBean.getCode() == 1) {
-                    mList.clear();
-                    mList.addAll(numBean.getData());
-                    adapter = new ArrayAdapter(CreatGroupActivity.this, android.R.layout.simple_expandable_list_item_1, mList);
-                    mListView.setAdapter(adapter);
-                }
-                return false;
-            }
-        }));
-        xUtilsHelper.setRequestParams(new String[][]{});
-        xUtilsHelper.sendPostAuto(GroupNumBean.class);
     }
 
     /**
@@ -384,7 +341,6 @@ public class CreatGroupActivity extends BaseActivity {
 
         if (type.equals("group")) {
             tvCreatGroupTs.setVisibility(View.VISIBLE);
-            mButton.setVisibility(View.VISIBLE);
             mGroupNum.setVisibility(View.VISIBLE);
         }
         mList = new ArrayList<>();

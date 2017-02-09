@@ -64,7 +64,7 @@ public class ShopRechargeActivity extends AppCompatActivity implements View.OnCl
      */
     private void initTitle() {
         titleBarCommonIvOperate3.setVisibility(View.GONE);
-        titleBarCommonTvTitle.setText("开店余额提现");
+        titleBarCommonTvTitle.setText("商家保证金");
         titleBarCommonIvOperate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -154,7 +154,7 @@ public class ShopRechargeActivity extends AppCompatActivity implements View.OnCl
                 return false;
             }
         }));
-        helper.setRequestParams(new String[][]{{"price",mMoney},{"bankname",card},{"name",name},{"tel",phone},{"kahao",card}});
+        helper.setRequestParams(new String[][]{{"price", mMoney}, {"bankname", card}, {"name", name}, {"tel", phone}, {"kahao", card}});
         helper.sendPostAuto(RenZhengBean.class);
     }
 

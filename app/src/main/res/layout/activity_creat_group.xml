@@ -78,9 +78,9 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/edit_bg_write"
-        android:focusable="false"
-        android:hint="选择的团号（可不选）"
-        android:maxLength="20"
+        android:hint="自填团号（可不填）"
+        android:inputType="number"
+        android:maxLength="8"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:singleLine="true"
@@ -138,14 +138,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginTop="10dp"
-        android:text="注意：选择一个号码作为战斗团号将收取100元手续费，可不选"
+        android:text="注意：自填一个号码作为战斗团号将收取100元手续费，可不填"
         android:textColor="@color/colorTextGray"
         android:textSize="@dimen/text12"
         android:visibility="gone" />
 
     <ListView
-
         android:id="@+id/lv_creat_group"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 </LinearLayout>

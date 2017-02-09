@@ -83,7 +83,7 @@ public class CompanyInfoActivity extends BaseActivity {
     private void selectImage() {
         MultiImageSelector.create()
                 .single()
-                .start(this,1000);
+                .start(this, 1000);
     }
 
     private void addCompanyInfo(String license) {
@@ -142,7 +142,6 @@ public class CompanyInfoActivity extends BaseActivity {
         mUploadImageHelper.sendPostAuto(ImageFileBean.class);
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -200,7 +199,10 @@ public class CompanyInfoActivity extends BaseActivity {
         mEtCompanyMobile.setText(mData.getPhone());
         mEtCompanyAddress.setText(mData.getSite());
         mEtCompanyAbout.setText(mData.getInfo());
-        Glide.with(this).load(Endpoint.HOST+mData.getLicense()).into(mCompanyImg);
+        Glide.with(this).load(Endpoint.HOST + mData.getLicense())
+                .placeholder(R.drawable.default_image)
+                .error(R.drawable.default_image)
+                .into(mCompanyImg);
     }
 
     @Override

@@ -1,9 +1,11 @@
 package com.xiangying.fighting.ui.three.zichan;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -101,17 +103,11 @@ public class TiXianActivity extends AppCompatActivity implements AdapterView.OnI
         switch (view.getId()) {
             case R.id.bt_tx_sure://提现
                 money = mMoney.getText().toString().trim();
-                if (TextUtils.isEmpty(type) || TextUtils.isEmpty(card) || TextUtils.isEmpty(money)) {
+                if (TextUtils.isEmpty(card) || TextUtils.isEmpty(money)) {
                     Toast.makeText(this, "请检查输入", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                //判断充值类型
-                if (type.equals("个人账户")) {
-                    path = "";
-                } else if (type.equals("商家账户")) {
-                    path = "";
-                }
-                tixian();
+                showDialog();
                 break;
 
             case R.id.tv_tx_change://选择银行卡
@@ -179,15 +175,40 @@ public class TiXianActivity extends AppCompatActivity implements AdapterView.OnI
      * 提现
      */
     private void tixian() {
-        XUtilsHelper helper = new XUtilsHelper(this, NetworkTools.SHOP_TX, new Handler(new Handler.Callback() {
+        XUtilsHelper helper = new XUtilsHelper(this, NetworkTools.SELE_BANK_TIXIAN, new Handler(new Handler.Callback() {
             @Override
             public boolean handleMessage(Message msg) {
                 RenZhengBean renZhengBean = (RenZhengBean) msg.obj;
                 Toast.makeText(TiXianActivity.this, renZhengBean.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
                 return false;
             }
         }));
         helper.setRequestParams(new String[][]{{"price", money}, {"bankname", card}});
         helper.sendPostAuto(RenZhengBean.class);
     }
+
+    /**
+     * 显示提示对话框
+     */
+    private void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(TiXianActivity.this);
+        builder.setMessage("确认提现吗？");
+        builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                tixian();
+            }
+        });
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 }

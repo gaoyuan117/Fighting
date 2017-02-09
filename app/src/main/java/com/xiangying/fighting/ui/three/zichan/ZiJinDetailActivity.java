@@ -2,15 +2,21 @@ package com.xiangying.fighting.ui.three.zichan;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.orhanobut.logger.Logger;
 import com.xiangying.fighting.R;
 import com.xiangying.fighting.ui.three.bean.ZiJinDetailBean;
+import com.xiangying.fighting.utils.NetworkTools;
+import com.xiangying.fighting.utils.XUtilsHelper;
 import com.xiangying.fighting.widget.FontTextView;
 
 import java.text.SimpleDateFormat;
@@ -39,7 +45,7 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
     ListView mListView;
 
     private String startTime, endTime, time, type;//开始时间，结束时间
-    private List<ZiJinDetailBean> mList;
+    private List<ZiJinDetailBean.DataBean> mList;
     private ZiJinDetailAdapter mAdapter;
 
 
@@ -69,14 +75,24 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
      * 获取数据
      */
     private void initData() {
-        for (int i = 0; i < 10; i++) {
-            ZiJinDetailBean bean = new ZiJinDetailBean();
-            bean.time = "2017年-01月-17日";
-            bean.source = "转账";
-            bean.money = "100元";
-            mList.add(bean);
-        }
-        mAdapter.notifyDataSetChanged();
+        XUtilsHelper helper = new XUtilsHelper(this, NetworkTools.ZJLS, new Handler(new Handler.Callback() {
+            @Override
+            public boolean handleMessage(Message msg) {
+                mList.clear();
+                ZiJinDetailBean bean = (ZiJinDetailBean) msg.obj;
+                Logger.d("code = ", bean.getCode());
+                if (bean.getCode() == 1) {
+                    mList.addAll(bean.getData());
+                    mAdapter.notifyDataSetChanged();
+                } else {
+                    Toast.makeText(ZiJinDetailActivity.this, bean.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+                mAdapter.notifyDataSetChanged();
+                return false;
+            }
+        }));
+        helper.setRequestParams(new String[][]{{"stime", startTime}, {"etime", endTime}});
+        helper.sendPostAuto(ZiJinDetailBean.class);
     }
 
     /**
@@ -93,7 +109,7 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
      */
     private void setTime() {
         long time = System.currentTimeMillis();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy年-MM月-dd日");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String date = format.format(time);
         mStart.setText(date);
         mEnd.setText(date);
@@ -131,8 +147,6 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
             case R.id.tv_zjdetail_search://搜索
                 startTime = mStart.getText().toString().trim();
                 endTime = mEnd.getText().toString().trim();
-
-                //TODO 请求数据
                 initData();
                 break;
         }
@@ -149,10 +163,26 @@ public class ZiJinDetailActivity extends AppCompatActivity implements View.OnCli
             public void onDateSet(DatePicker view,
                                   int year, int monthOfYear,
                                   int dayOfMonth) {
+                String date = "";
+
+                if (monthOfYear < 10) {
+                    date = year + "-0" + (monthOfYear + 1) + "-" + dayOfMonth;
+                }
+                if (dayOfMonth < 10) {
+                    date = year + "-" + (monthOfYear + 1) + "-0" + dayOfMonth;
+                }
+                if (monthOfYear < 10 && dayOfMonth < 10) {
+                    date = year + "-0" + (monthOfYear + 1) + "-0" + dayOfMonth;
+                }
+
+                if (monthOfYear > 10 && dayOfMonth > 10) {
+                    date = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
+                }
+
                 if (type.equals("start")) {
-                    mStart.setText(year + "年-" + (monthOfYear + 1) + "月-" + dayOfMonth + "日");
+                    mStart.setText(date);
                 } else if (type.equals("end")) {
-                    mEnd.setText(year + "年-" + (monthOfYear + 1) + "月-" + dayOfMonth + "日");
+                    mEnd.setText(date);
                 }
             }
         }, calendar.get(Calendar.YEAR), calendar

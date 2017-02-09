@@ -72,8 +72,7 @@ public class UserAllNoteAdapter extends MultiItemTypeAdapter<AllNoteBean.DataBea
                         @Override
                         protected void convert(com.xiangying.fighting.widget.listview.ViewHolder holder, String item, int position) {
                             ImageView imageView = holder.getView(R.id.item_image_sdv_image);
-                            imageView.setImageResource(R.drawable.default_image);
-                            Glide.with(mContext).load(Endpoint.HOST + item).into(imageView);
+                            Glide.with(mContext).load(Endpoint.HOST + item).placeholder(R.drawable.default_image).into(imageView);
                         }
                     });
 
@@ -103,10 +102,10 @@ public class UserAllNoteAdapter extends MultiItemTypeAdapter<AllNoteBean.DataBea
 
             @Override
             public void convert(ViewHolder helper, AllNoteBean.DataBean item, int position) {
-                helper.setText(R.id.item_colum_tv_month, TimeUtil.transformLongTimeFormat(item.getCreate_time() *1000,TimeUtil.STR_FORMAT_DATA));
+                helper.setText(R.id.item_colum_tv_month, TimeUtil.transformLongTimeFormat(item.getCreate_time() * 1000, TimeUtil.STR_FORMAT_DATA));
                 helper.setText(R.id.item_colum_tv_content, item.getContent());
                 JCVideoPlayerStandard standard = helper.getView(R.id.jc_me_video);
-                standard.setUp(Endpoint.HOST + item.getMoviePath(), JCVideoPlayer.SCREEN_LAYOUT_LIST,"");
+                standard.setUp(Endpoint.HOST + item.getMoviePath(), JCVideoPlayer.SCREEN_LAYOUT_LIST, "");
 //                Bitmap videoThumbnail = ThumbUtils.get().createVideoThumbnail(Endpoint.HOST + item.getMoviePath(), MediaStore.Images.Thumbnails.MINI_KIND);
 //                standard.thumbImageView.setImageBitmap(videoThumbnail);
             }
